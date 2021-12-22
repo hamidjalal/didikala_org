@@ -16,7 +16,7 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        ViewBag.pr=Db_Product.Select();
+        ViewBag.pr = Db_Product.Select();
         return View();
     }
     public IActionResult Login()
@@ -27,6 +27,7 @@ public class HomeController : Controller
     {
         return View();
     }
+    
 
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

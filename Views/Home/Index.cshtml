@@ -132,12 +132,12 @@
                         </div>
 
                         <!-- Start Product-Slider -->
-                        <div class="col-12 px-res-0">
+                        <div class="row col-12 px-res-0">
                             <div class="product-carousel carousel-md owl-carousel owl-theme">
+                                @foreach (var item in ViewBag.pr)
+                                        {
                                 <div class="item">
                                     <div class="product-card">
-                                        @foreach (var item in ViewBag.pr)
-                                        {
                                             <div class="product-head">
                                                 <div class="rating-stars">
                                                     <i class="mdi mdi-star active"></i>
@@ -160,9 +160,9 @@
                                                 <a class="product-meta" href="shop-categories.html">لباس زنانه</a>
                                                 <span class="product-price">@item.Price</span>
                                             </div>
-                                        }
                                     </div>
                                 </div>
+                                }
                             </div>
                         </div>
                         <!-- End Product-Slider -->
