@@ -12,7 +12,7 @@ namespace Product
         {
             using (SqlConnection db = new SqlConnection(a))
             {
-                var list = db.Query<VM_Product>("Select * from product where active = 1").ToList();
+                var list = db.Query<VM_Product>("SELECT * FROM dbo.Product INNER JOIN dbo.Category ON dbo.Product.Categoryid =dbo.Category.Categoryid").ToList();
                 return list;
             }
         }
@@ -27,5 +27,8 @@ namespace Product
         public string Img_url { get; set; }
         public int Categoryid { get; set; }
         public int Active { get; set; }
+        public string Category_name { get; set; }
+        
+        
     }
 }
